@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Date for Jaana</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      transition: background 1s ease-in-out;
+    }
+    .white-candle {
+      background: #fff url('https://pin.it/2pcRczeO1') no-repeat center center/contain;
+      flex-direction: column;
+    }
+    .silhouette-invite, .bike-ask, .sunset-scene, .bike-ride, .beach-talk, .final-question {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
+      flex-direction: column;
+    }
+    .silhouette-invite { background-image: url('https://pin.it/3HElLtiNY'); }
+    .sunset-scene { background-image: url('sunset.mp4'); }
+    .bike-ask { background: #00334e; }
+    .bike-ride { background-image: url('https://pin.it/29pahvbIr'); }
+    .beach-talk { background-image: url('https://pin.it/28wW7N0ue'); }
+    .final-question { background: black; color: pink; }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff69b4;
+      color: white;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #ff1493;
+    }
+    .hearts {
+      font-size: 2rem;
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="soniyo.mp3" type="audio/mpeg">
+  </audio>
+
+  <section class="white-candle">
+    <h1>ARE YOU READY FOR OUR VIRTUAL DATE?</h1>
+    <button onclick="scrollToSection('silhouette')">Yes</button>
+  </section>
+
+  <section id="silhouette" class="silhouette-invite">
+    <h2>You look beautiful more today as always...</h2>
+    <p>Can I take you to the sunset so I can show the sun I found someone more beautiful than him?</p>
+    <button onclick="scrollToSection('sunset')">Yes</button>
+  </section>
+
+  <section id="sunset" class="sunset-scene">
+    <h2>Watching the sunset…</h2>
+    <p>The sky turns pink to celebrate you, Jaana.</p>
+    <button onclick="scrollToSection('bikeAsk')">Loved it!</button>
+  </section>
+
+  <section id="bikeAsk" class="bike-ask">
+    <h2>You loved it?</h2>
+    <p>Can I take you on my bike to a place where we can talk with tides too?</p>
+    <p>I want to show the nature, who I got!</p>
+    <button onclick="scrollToSection('bikeRide')">Let's Go</button>
+  </section>
+
+  <section id="bikeRide" class="bike-ride">
+    <h2>Bike ride with R & Jaana</h2>
+    <p>With every mile, your name echoes in the wind...</p>
+    <button onclick="scrollToSection('beach')">Arrived at the beach</button>
+  </section>
+
+  <section id="beach" class="beach-talk">
+    <h2>Beach, moonlight, and us...</h2>
+    <p>Jaana rests her head on R's shoulder as waves whisper softly...</p>
+    <p>Now that the sun has set, let's talk to the moon.</p>
+    <button onclick="scrollToSection('final')">Next</button>
+  </section>
+
+  <section id="final" class="final-question">
+    <h2 class="hearts">❤️ ❤️ ❤️</h2>
+    <h2>Did you like it?</h2>
+    <button onclick="alert('I’m so glad, Jaana. You made this sunset magical.')">Yes, I loved it</button>
+  </section>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+<audio autoplay loop>
+  <source src="soniyo.mp3" type="audio/mpeg">
+</audio>
+
+<video autoplay muted loop id="background-video">
+  <source src="sunset.mp4" type="video/mp4">
+</video>
+ </script>
+</body>
+</html>
